@@ -1,0 +1,19 @@
+<div id="container" class="container">
+  <div id="child">
+    <div id="row" class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center" >
+        <h3>Click right here to get my email address</h3>
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center" >
+        <span>
+          <i class="fas fa-arrow-down fa-2x" style="color: dodgerblue"></i>
+        </span>
+      </div>
+      <div id="getemailbutton" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center" >
+        <button class="btn" (mouseover)="overButton()" (mouseleave)="leftButton()" *ngIf="!wantsEmailAddress && !isOverButton" (click)="wantsEmailAddress = true">cedricdevries.getEmail();</button>
+        <button class="btn blueborder" (mouseover)="overButton()" (mouseleave)="leftButton()" *ngIf="!wantsEmailAddress && isOverButton" (click)="wantsEmailAddress = true">cedricdevries.getEmail();</button>
+        <p *ngIf="wantsEmailAddress">devriesced@gmail.com</p>
+      </div>
+    </div>
+  </div>
+</div>

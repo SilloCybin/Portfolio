@@ -1,0 +1,38 @@
+<div id="container" class="container">
+  <div id="row" class="row">
+    <div id="rowelement1" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 justify-content-center">
+    <h3 class="text-center">{{ project.title }}</h3>
+      <p class="text-center" style="color: dimgrey"><i>{{ project.type }} - Completed in {{ project.completed }}</i></p>
+      <div class="text-center" id="icon">
+        <span *ngIf="project.id===1" style=" color: Dodgerblue">
+          <i class="fas fa-cloud-upload-alt fa-3x"></i>
+        </span>
+        <span *ngIf="project.id===2" style=" color: Dodgerblue">
+          <i class="fas fa-gamepad fa-3x"></i>
+        </span>
+        <span *ngIf="project.id===3" style=" color: Dodgerblue">
+        <i class="fas fa-gopuram fa-3x"></i>
+        </span>
+        <span *ngIf="project.id===4" style=" color: Dodgerblue">
+          <i class="fas fa-podcast fa-3x"></i>
+        </span>
+      </div>
+    <hr class="my-4">
+    <br>
+    <p class="text-center technologies"><i>{{ project.technologies }}</i></p>
+    <br>
+    <p class="text-justify" [innerHTML]="project.description"></p>
+    <br>
+      <p class="text-justify learned"><i><u><b>What i've learned:</b></u></i>&nbsp;{{ project.learned }}</p>
+    <br>
+      <p *ngIf="project.id==1" class="text-center">If you want to see the code behind it go see the project's <a target="_blank" href="https://github.com/SilloCybin/FileTransferToNAS">GitHub repository</a>. Also do not hesitate to tell me what you think about it !</p>
+      <p *ngIf="project.id==2" class="text-center">If you want to see the code behind it go see the project's <a target="_blank" href="https://github.com/SilloCybin/TicTacToe">GitHub repository</a>. Also do not hesitate to tell me what you think about it !</p>
+      <p *ngIf="project.id==3" class="text-center">If you want to see the code behind it go see the project's <a target="_blank" href="https://github.com/SilloCybin/ColombianArcheologicalArchive">GitHub repository</a>. Also do not hesitate to tell me what you think about it !</p>
+      <p *ngIf="project.id==4" class="text-center">If you want to see the code behind it go see the project's <a target="_blank" href="https://github.com/SilloCybin/Portfolio">GitHub repository</a>. Also do not hesitate to tell me what you think about it !</p>
+    <br>
+      <div id ="backToListButton" class="text-center">
+      <button (click)="onBackToProjects()" class="btn btn-primary" style="background-color: dodgerblue; border-color: dodgerblue"><i class="fas fa-arrow-left"></i>&nbsp;Back to project list</button>
+      </div>
+    </div>
+  </div>
+</div>

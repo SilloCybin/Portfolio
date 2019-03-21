@@ -1,0 +1,66 @@
+<div id="container" class="container" style="background: white">
+  <div id="row" class="row border-bottom">
+    <div id="name" class="col-lg-5 col-md-12 col-sm-12 col-xs-12 text-center">
+      <h1 id ="title" class="text-center">Cedric De Vries</h1>
+    </div>
+    <div id="menudiv" class="col-lg-6 col-md-12 col-sm-12 col-xs-12 text-center">
+      <ol id="menu">
+        <li routerLinkActive="active" (mouseover)="overAboutMe()" (mouseleave)="leftAboutMe()" (click)="onAboutMeClick()">
+          <a *ngIf="!isOverAboutMe && !isOnAboutMe()" routerLink="AboutMe">About Me</a>
+          <a *ngIf="isOverAboutMe && !isOnAboutMe()" routerLink="AboutMe" style="color: dimgray">About Me</a>
+          <a *ngIf="isOnAboutMe()" class="font-weight-bold">About Me</a>
+        </li>
+        <li routerLinkActive="active" (mouseover)="overResume()" (mouseleave)="leftResume()" (click)="onResumeClick()">
+          <a *ngIf="!isOverResume && !isOnResume()" routerLink="Resume">Resume </a>
+          <a *ngIf="isOverResume && !isOnResume()" routerLink="Resume" style="color: dimgray">Resume </a>
+          <a *ngIf="isOnResume()" class="font-weight-bold">Resume</a>
+        </li>
+        <li routerLinkActive="active" (mouseover)="overProjects()" (mouseleave)="leftProjects()" (click)="onProjectsClick()">
+          <a *ngIf="!isOverProjects && !isOnProjects()" routerLink="Projects">Projects</a>
+          <a *ngIf="isOverProjects && !isOnProjects()" routerLink="Projects" style="color: dimgray">Projects</a>
+          <a *ngIf="isOnProjects()" class="font-weight-bold">Projects</a>
+        </li>
+        <li routerLinkActive="active" (mouseover)="overContact()" (mouseleave)="leftContact()" (click)="onContactClick()">
+          <a *ngIf="!isOverContact && !isOnContact()" routerLink="Contact">Contact</a>
+          <a *ngIf="isOverContact && !isOnContact()" routerLink="Contact" style="color: dimgray">Contact</a>
+          <a *ngIf="isOnContact()" class="font-weight-bold">Contact</a>
+        </li>
+      </ol>
+      <br>
+    </div>
+    <div id="smdiv" class="col-lg-1 col-md-12 col-sm-12 col-xs-12 float-lg-right">
+      <ol id="smlinks">
+        <li>
+          <a target="_blank" href="https://github.com/SilloCybin">
+            <span (mouseleave)="leftGit()" (mouseover)="overGit()" (click)="onGitClick()" *ngIf="!isOverGit">
+              <i class="fab fa-github fa-lg"></i>
+            </span>
+            <span (mouseleave)="leftGit()" (mouseover)="overGit()" (click)="onGitClick()" *ngIf="isOverGit" style="color: Black">
+              <i class="fab fa-github fa-lg"></i>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://www.linkedin.com/in/cedric-de-vries-440b30a4/">
+            <span (mouseleave)="leftLkd()" (mouseover)="overLkd()" (click)="onLkdClick()" *ngIf="!isOverLkd">
+              <i class="fab fa-linkedin-in fa-lg"></i>
+            </span>
+            <span (mouseleave)="leftLkd()" (mouseover)="overLkd()" (click)="onLkdClick()" *ngIf="isOverLkd" style="color: sandybrown">
+              <i class="fab fa-linkedin-in fa-lg"></i>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://www.instagram.com/cedricnmorty/?hl=en">
+            <span (mouseleave)="leftInsta()" (mouseover)="overInsta()" (click)="onInstaClick()" *ngIf="!isOverInsta">
+              <i class="fab fa-instagram fa-lg"></i>
+            </span>
+            <span (mouseleave)="leftInsta()" (mouseover)="overInsta()" (click)="onInstaClick()" *ngIf="isOverInsta" style="color: Purple">
+              <i class="fab fa-instagram fa-lg"></i>
+            </span>
+          </a>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+div#container{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+div#row{
+  display: flex;
+  align-items: center;
+}
+img#MyPicture {
+  max-width: 100%;
+  height: auto;
+}
+p#quote{
+  font-size: 10pt;
+}
+

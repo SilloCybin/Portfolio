@@ -1,0 +1,13 @@
+<div id="container" class="container">
+  <div id="row" class="row">
+    <div id="rowelement1" *ngFor="let project of projectList" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <app-project-list-item
+        [titre]="project.title"
+        [description]="project.description"
+        [technologies]="project.technologies"
+        [learned]="project.learned"
+        [id]="project.id">
+      </app-project-list-item>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,66 @@
+<div id="container" class="jumbotron text-center">
+  <div (mouseover)="overProject()" (mouseleave)="leftProject()" (click)="onProjectClick()" [class.blueborder]="isOverProject" class="btn">
+      <h4 *ngIf="!isOverProject" class="text-center">{{ titre }}</h4>
+      <h4 *ngIf="isOverProject" class="text-center blur">{{ titre }}</h4>
+      <span *ngIf="id===1 && !isOverProject" style=" color: Dodgerblue">
+        <i class="fas fa-cloud-upload-alt fa-3x"></i>
+      </span>
+      <span *ngIf="id===2 && !isOverProject" style=" color: Dodgerblue">
+        <i class="fas fa-gamepad fa-3x"></i>
+      </span>
+      <span *ngIf="id===3 && !isOverProject" style=" color: Dodgerblue">
+       <i class="fas fa-gopuram fa-3x"></i>
+      </span>
+      <span *ngIf="id===4 && !isOverProject" style=" color: Dodgerblue">
+        <i class="fas fa-podcast fa-3x"></i>
+      </span>
+    <div id="minicontainer">
+      <div *ngIf="isOverProject" id="minichild">
+        <div id="gotorepo">
+            <span (mouseover)="overGoToRepo()" (mouseleave)="leftGoToRepo()" (click)="onGoToRepoClick()">
+              <a *ngIf="id===1" target="_blank" href="https://github.com/SilloCybin/FileTransferToNAS">
+                <i *ngIf="!isOverGoToRepo" class="fab fa-github fa-2x"></i>
+                <i *ngIf="isOverGoToRepo" class="fab fa-github fa-2x" style="color: black"></i>
+              </a>
+              <a *ngIf="id===2" target="_blank" href="https://github.com/SilloCybin/TicTacToe">
+                <i *ngIf="!isOverGoToRepo" class="fab fa-github fa-2x"></i>
+                <i *ngIf="isOverGoToRepo" class="fab fa-github fa-2x" style="color: black"></i>
+              </a>
+              <a *ngIf="id===3" target="_blank" href="https://github.com/SilloCybin/ColombianArcheologicalArchive">
+                <i *ngIf="!isOverGoToRepo" class="fab fa-github fa-2x"></i>
+                <i *ngIf="isOverGoToRepo" class="fab fa-github fa-2x" style="color: black"></i>
+              </a>
+              <a *ngIf="id===4" target="_blank" href="https://github.com/SilloCybin/Portfolio">
+                <i *ngIf="!isOverGoToRepo" class="fab fa-github fa-2x"></i>
+                <i *ngIf="isOverGoToRepo" class="fab fa-github fa-2x" style="color: black"></i>
+              </a>
+            </span>
+          <p><b>Repository</b></p>
+        </div>
+        <div  id="seemore">
+          <span (mouseover)="overSeeMore()" (mouseleave)="leftSeeMore()" (click)="onSeeMoreClick()">
+            <button>
+              <a>
+                <i *ngIf="!isOverSeeMore" class="fas fa-arrow-right fa-2x" style="color: dodgerblue"></i>
+                <i *ngIf="isOverSeeMore" class="fas fa-arrow-right fa-2x" style="color: forestgreen"></i>
+              </a>
+            </button>
+          </span>
+        <p><b>See more</b></p>
+      </div>
+      </div>
+    </div>
+    <hr *ngIf="!isOverProject" class="my-4">
+    <div class="justify-content-center">
+      <div *ngIf="!isOverProject">
+        <p class="text-center technologies"><i>{{ technologies }}</i></p>
+        <p class="text-justify learned"><i><u><b>What i've learned:</b></u></i>&nbsp;{{ learned }}</p>
+      </div>
+      <div *ngIf="isOverProject">
+        <p class="text-center technologies blur"><i>{{ technologies }}</i></p>
+        <p class="text-justify learned blur"><i><u><b>What i've learned:</b></u></i>&nbsp;{{ learned }}</p>
+    </div>
+    </div>
+  </div>
+</div>
+

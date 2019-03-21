@@ -1,0 +1,63 @@
+.jumbotron{
+  margin: 10px;
+  padding: 10px;
+  background: white;
+}
+.btn{
+  border-color: black;
+  border-radius: 5px;
+  background: transparent;
+  width: 100%;
+  box-shadow: inset 0 0 3px dimgrey ;
+}
+button{
+  background-color: white;
+  border: none;
+}
+.blueborder{
+  border-color: dodgerblue;
+  border-width: 3px;
+  border-radius: 5px;
+  background: transparent;
+  width: 100%;
+  box-shadow: none;
+}
+h4{
+  padding-top: 5px;
+}
+.technologies{
+  color: dodgerblue;
+  font-size: 10pt;
+  font-weight: bold;
+}
+.learned{
+  font-size: 10pt;
+}
+.blur{
+  filter: blur(2px);
+}
+div#minicontainer{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+div#minichild {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div#seemore{
+  padding: 12px 10px;
+}
+div#gotorepo{
+  padding: 12px 10px;
+}
+:focus {
+  outline: 0;
+}
+hr{
+  padding-top: 5px;
+}

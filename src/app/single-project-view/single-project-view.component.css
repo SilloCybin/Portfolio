@@ -1,0 +1,25 @@
+div#container{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+div#row {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+div#backToListButton{
+  padding: 25px;
+}
+.technologies{
+  color: dodgerblue;
+  font-size: 10pt;
+  font-weight: bold;
+}
+.learned{
+  font-size: 10pt;
+}
+
